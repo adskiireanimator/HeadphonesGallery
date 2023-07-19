@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main className="h-full w-screen">
       <div className="flex pt-20">
-        <div className="w-full max-w-[600px] md:max-w-[960px] lg:max-w-[1200px] md:h-[604px] mx-auto flex flex-col md:flex-row gap-6">
+        <div className="w-full max-w-[600px] md:max-w-[960px] lg:max-w-[1200px] md:h-[604px] mx-auto flex flex-col md:flex-row gap-16 md:gap-6">
           <div className="min-w-full md:min-w-[540px] lg:min-w-[660px] h-[604px]">
             <Gallery />
           </div>

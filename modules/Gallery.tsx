@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, ReactNode } from "react";
+import React, { useState, ReactNode, useEffect } from "react";
 import Image from "next/image";
 import clsx from "clsx";
 
@@ -79,13 +79,23 @@ export const Gallery: React.FC = () => {
   function lastSlide() {
     if (activeId != 0) {
       setId(activeId - 1);
+    } else {
+      setId(slides.length - 1);
     }
   }
   function nextSlide() {
     if (activeId != 6) {
       setId(activeId + 1);
+    } else {
+      setId(0);
     }
   }
+  useEffect(() => {
+    console.log("componentDidUpdate");
+    if (activeId === 1) {
+      confirm("sadasdasdasmndbashjlbdshjadbhja");
+    }
+  });
 
   return (
     <div className="w-full h-full">
